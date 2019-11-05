@@ -11,7 +11,7 @@ defmodule Bla do
   end
 
   def start do
-    fac(10) |> Integer.to_string() |> String.graphemes |> sum() |> IO.puts
+    fac(100) |> Integer.to_string() |> String.graphemes |> sum() |> IO.puts
   end
 
 end
