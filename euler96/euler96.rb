@@ -94,6 +94,7 @@ all_digits = []
 puts "this takes some time.."
 read_sudokus('./sudoku.txt') do |sudoku|
   sudoku = Sudoku.new(sudoku)
+  sudoku.puts_sudoku
   sudoku.solve(0, 0)
   sudoku.puts_sudoku
   all_digits.push(sudoku.get_digits)
