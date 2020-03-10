@@ -1,13 +1,10 @@
-def test(num)
-  digits = (1..6).map{ |n| num * n }
-  first = digits[0].to_s.chars.sort
-  !digits.any?{ |num| num.to_s.chars.sort != first }
+max = 0
+
+100.times do |i|
+  100.times do |j|
+    curr = (i ** j).to_s.chars.map(&:to_i).sum
+    max = curr if max < curr
+  end
 end
 
-num = 1
-loop do
-  result = test(num)
-  puts "#{num}: #{result}"
-  return if result
-  num += 1
-end
+puts max
