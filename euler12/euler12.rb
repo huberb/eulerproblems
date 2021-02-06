@@ -26,7 +26,6 @@ end
 
 triangle_numbers do |num|
   count = factors(num)
-  puts count if count > 300
   if count > 500
     puts "FOUND: #{num}"
     exit
